@@ -1,0 +1,202 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
+}
+
+.header_div {
+  height: 10vh;
+  width: 100vw;
+  background-color: rgb(69, 69, 228);
+  display: flex;
+  justify-content: space-between;
+  font-size: larger;
+  font-weight: bolder;
+  padding: 20px;
+}
+.header_div h2 {
+  font-family: "Dancing Script", cursive;
+  font-size: xx-large;
+}
+.quiz_props {
+  display: flex;
+  background-color: rgb(69, 69, 228);
+  width: 550px;
+  align-items: center;
+  justify-content: space-around;
+}
+.result_div {
+  height: 100%;
+  width: 100vw;
+  display: flex;
+  background-color: white;
+  flex-direction: column;
+  margin-top: 0;
+  padding: 0;
+}
+
+.load_questions {
+  margin: 0 50px 50px 50px;
+  color: black;
+  border: 1px solid black;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: 330px;
+  width: 85%;
+  display: inline;
+}
+
+.submit {
+  background-color: pink;
+  position: absolute;
+  right: 3px;
+  bottom: 3px;
+  padding: 7px 17px;
+}
+
+button {
+  background: rgb(252, 206, 214);
+  outline: none;
+  border: none;
+  border-radius: 0.25rem;
+  padding: 7px;
+  margin: 7px;
+  color: rgb(224, 46, 76);
+  cursor: pointer;
+}
+.category {
+  cursor: pointer;
+}
+.answer {
+  width: max-content;
+  padding: auto;
+}
+.categories button {
+  display: block;
+  width: 100%;
+  margin: auto;
+  margin-bottom: 5px;
+  background: transparent;
+}
+.title,
+.category,
+.difficulty {
+  color: white;
+}
+.option:focus button {
+  background-color: blue;
+  color: white;
+}
+.categories {
+  position: absolute;
+  background-color: pink;
+  padding: 10px;
+  border-radius: 0.8rem;
+  display: none;
+  z-index: 1;
+}
+
+.category:hover .categories {
+  display: block;
+}
+
+.title {
+  width: max-content;
+  height: max-content;
+}
+
+.difficulties button {
+  display: block;
+  width: 100%;
+  margin: auto;
+  margin-bottom: 5px;
+  background: transparent;
+}
+.difficulty {
+  cursor: pointer;
+  pointer-events: all;
+}
+.difficulty:hover .difficulties {
+  display: block;
+  transition: all 250ms ease-in-out;
+}
+.difficulties {
+  position: absolute;
+  background: pink;
+  padding: 10px;
+  border-radius: 0.53rem;
+  display: none;
+  z-index: 1;
+}
+
+.next {
+  width: max-content;
+  right: 50px;
+  padding: 15px;
+  align-self: flex-end;
+  margin: 25px;
+  margin-right: 40px;
+  display: inline;
+}
+
+.question {
+  display: inline;
+  font-size: larger;
+  font-weight: bolder;
+}
+
+.option button {
+  cursor: pointer;
+  outline: none;
+  border-radius: 0.4rem;
+  width: max-content;
+  padding: 7px;
+  margin: 7px;
+  font-weight: bolder;
+}
+
+@media only screen and (max-width: 420px) {
+  .category {
+    font-size: small;
+  }
+  .option {
+    font-size: small;
+  }
+  .answer {
+    width: 60%;
+    font-size: 13px;
+  }
+  .option button {
+    font-size: 13px;
+    width: 60%;
+  }
+  .difficulty {
+    font-size: small;
+  }
+  .title h2 {
+    font-size: 25px;
+  }
+  .header_div {
+    padding: 0;
+  }
+  .title {
+    padding: 7px;
+    margin: auto 0;
+  }
+  .quiz_props {
+    width: 40%;
+  }
+  .question {
+    font-size: 14px;
+  }
+  .load_questions {
+    height: max-content;
+    margin: 20px auto;
+  }
+}
